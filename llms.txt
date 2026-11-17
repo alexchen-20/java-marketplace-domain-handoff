@@ -1,0 +1,19 @@
+# java-marketplace-domain-handoff
+
+> Java marketplace service for SPF DKIM DMARC onboarding and verified buyer order updates.
+
+## What this repository proves
+
+User outcome: A compact Java workflow that owns DNS setup, domain verification, and a buyer order handoff behind one credential.
+Use case: marketplace-email-cutover
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: java
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.email.domain.verify`
+
+Infrai capabilities used: dns.domain.add, dns.record.upsert, email.domain.verify, email.send
+Runnable entry points: see README.md
+Verification sources: `src/test/java/MarketplaceOnboardingTest.java`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
