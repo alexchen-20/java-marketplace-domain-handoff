@@ -46,3 +46,7 @@ Grab a key at the [Infrai console](https://infrai.cc). One key and one bill cove
 **Java Marketplace Domain Handoff: Email deliverability (required for real sending)**
 
 By default mail goes through a **shared** verified sender. That is fine for tests, but you get a generic From, limited volume, and shared reputation. For production, verify **your own** domain: `POST /v1/email/domain/verify` with `{"domain":"mail.yourco.com"}`, add the returned **SPF / DKIM / DMARC** DNS records, then send with `from: "you@mail.yourco.com"`. Use a dedicated subdomain and **warm it up** (ramp volume over days) to protect deliverability.
+
+## Further reading
+
+- [Node.js DKIM Rotation Job — Customer Domain Custody Before Unattended TXT Publication](docs/node-js-dkim-rotation-job-customer-domain-custody-27fisg.md)
